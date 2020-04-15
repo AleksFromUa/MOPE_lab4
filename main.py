@@ -108,7 +108,9 @@ while True:
     pt1.add_column(column_names1[11], Y_row_av_arr)
     pt1.add_column(column_names1[12], Dispersion_list)
     print(colored(pt1, "red"))
-
+    
+    # рівняння регресії з ефектом взаємодії
+    
     print(colored(
         "y = {} + {}*x1 + {}*x2 + {}*x3 + {}*x1x2 + {}*x1x3 + {}*x2x3 + {}*x1x2x3 \n".format(list_bi[0], list_bi[1],
                                                                                              list_bi[2], list_bi[3],
@@ -131,7 +133,9 @@ while True:
     pt2.add_column(column_names1[11], Y_row_av_arr)
     pt2.add_column(column_names1[12], Dispersion_list)
     print(colored(pt2, "red"))
-
+    
+    # перехід до рівняння взаємодії
+    
     list_ai = [round(i, 5) for i in solve(list_for_solve_a, Y_row_av_arr)]
     print(colored(
         "y = {} + {}*x1 + {}*x2 + {}*x3 + {}*x1x2 + {}*x1x3 + {}*x2x3 + {}*x1x2x3".format(list_ai[0], list_ai[1],
